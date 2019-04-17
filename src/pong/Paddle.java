@@ -49,6 +49,6 @@ public class Paddle extends Block {
 
     }
     public String toString(){
-        return getX() + " " + getY() + " " + getWidth() + " " + getHeight() + " " + getColor() + " " + getSpeed();
+        return super.toString() + " " + getSpeed();
     }
 }
