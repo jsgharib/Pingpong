@@ -35,14 +35,17 @@ public class Ball extends Block {
     }
 
     public void moveAndDraw(Graphics window) {
-        window.setColor(Color.white);
-        window.fillOval(super.getX(), super.getY(), super.getWidth(),super.getHeight());
+        
+        draw(window,Color.white);
+        //window.setColor(Color.white);
+        //window.fillOval(super.getX(), super.getY(), super.getWidth(),super.getHeight());
          setX(getX() + xSpeed);
          setY(getY() + ySpeed);		//setY
          
         //draw the ball at its new location
-         window.setColor(super.getColor());
-         window.fillOval(super.getX(), super.getY(), super.getWidth(),super.getHeight());
+         draw(window);
+//         window.setColor(super.getColor());
+  //       window.fillOval(super.getX(), super.getY(), super.getWidth(),super.getHeight());
     }
 
     public boolean equals(Object obj) {
@@ -66,6 +69,34 @@ public class Ball extends Block {
     
     public void setYs(int s){
         ySpeed = s;
+    }
+    public void randSpeed(){
+         double speed1 = ((Math.random()*4)-2);
+         double speed2 = ((Math.random()*4)-2);
+         while(speed1 == 0){
+             speed1 = ((Math.random()*4)-2);
+         }
+         
+         while(speed2 == 0){
+             speed2 = ((Math.random()*4)-2);
+         }
+         
+         if(speed1 > 0){
+             speed1 = Math.ceil(speed1);
+         }
+         else if(speed1 < 0){
+            speed1 = Math.floor(speed1);
+         
+         }
+         if(speed2 > 0){
+             speed2 = Math.ceil(speed2);
+         }
+         else if(speed2 < 0){
+            speed2 = Math.floor(speed2);
+         }
+         
+         xSpeed = (int)speed1;
+         ySpeed = (int)speed2;
     }
     //add a toString() method
     

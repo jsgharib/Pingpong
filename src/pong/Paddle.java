@@ -42,11 +42,24 @@ public class Paddle extends Block {
     }
 
     public void moveUpAndDraw(Graphics window) {
+        window.setColor(Color.white);
+        window.fillRect(super.getX(), super.getY(), super.getWidth(),super.getHeight());
+        
+         setY(getY() - speed);
+         
+         window.setColor(super.getColor());
+         window.fillRect(super.getX(), super.getY(), super.getWidth(),super.getHeight());
         
     }
 
     public void moveDownAndDraw(Graphics window) {
-
+        window.setColor(Color.white);
+        window.fillRect(super.getX(), super.getY(), super.getWidth(),super.getHeight());
+        
+         setY(getY() + speed);
+         
+         window.setColor(super.getColor());
+         window.fillRect(super.getX(), super.getY(), super.getWidth(),super.getHeight());
     }
     public String toString(){
         return super.toString() + " " + getSpeed();
