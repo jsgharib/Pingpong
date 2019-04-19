@@ -84,11 +84,11 @@ public class Pong extends Canvas implements KeyListener, Runnable {
         if (ball.getY() <= 0 || ball.getY() >= getHeight()-ball.getHeight()) {
             ball.setYs(-ball.getYs());
         }
-        if ((ball.getX() - ball.getXs() <= leftPaddle.getX() + leftPaddle.getWidth() && ball.getX() + ball.getWidth() >= leftPaddle.getX()) && (ball.getY() <= leftPaddle.getY() && ball.getY() >= leftPaddle.getY() - leftPaddle.getHeight())) {
+        if ((ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() && ball.getX() + ball.getWidth() >= leftPaddle.getX()) && (ball.getY() + ball.getHeight() >= leftPaddle.getY() && ball.getY() <= leftPaddle.getY() + leftPaddle.getHeight())) {
             ball.setXs(-ball.getXs());
             ball.setYs(-ball.getYs());
         }
-        if ((ball.getX()+ball.getWidth() + ball.getXs() >= rightPaddle.getX() && ball.getX() <= rightPaddle.getX() + rightPaddle.getWidth()) && (ball.getY() <= rightPaddle.getY() && ball.getY() >= rightPaddle.getY() - rightPaddle.getHeight())) {
+        if ((ball.getX()+ball.getWidth() >= rightPaddle.getX() && ball.getX() <= rightPaddle.getX() + rightPaddle.getWidth()) && (ball.getY()+ball.getHeight() >= rightPaddle.getY() && ball.getY() <= rightPaddle.getY() + rightPaddle.getHeight())) {
             ball.setXs(-ball.getXs());
             ball.setYs(-ball.getYs());
         }
