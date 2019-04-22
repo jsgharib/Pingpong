@@ -86,11 +86,9 @@ public class Pong extends Canvas implements KeyListener, Runnable {
         }
         if ((ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() && ball.getX() + ball.getWidth() >= leftPaddle.getX()) && (ball.getY() + ball.getHeight() >= leftPaddle.getY() && ball.getY() <= leftPaddle.getY() + leftPaddle.getHeight())) {
             ball.setXs(-ball.getXs());
-            ball.setYs(-ball.getYs());
         }
         if ((ball.getX()+ball.getWidth() >= rightPaddle.getX() && ball.getX() <= rightPaddle.getX() + rightPaddle.getWidth()) && (ball.getY()+ball.getHeight() >= rightPaddle.getY() && ball.getY() <= rightPaddle.getY() + rightPaddle.getHeight())) {
             ball.setXs(-ball.getXs());
-            ball.setYs(-ball.getYs());
         }
         
         if (keys[0] && leftPaddle.getY() > 0) {
@@ -136,13 +134,13 @@ public class Pong extends Canvas implements KeyListener, Runnable {
             case 'W':
                 keys[0] = false;
                 break;
-            case 'S':
+            case 'Z':
                 keys[1] = false;
                 break;
-            case 'E':
+            case 'I':
                 keys[2] = false;
                 break;
-            case 'D':
+            case 'M':
                 keys[3] = false;
                 break;
         }
