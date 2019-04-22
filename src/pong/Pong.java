@@ -116,13 +116,13 @@ public class Pong extends Canvas implements KeyListener, Runnable {
             case 'W':
                 keys[0] = true;
                 break;
-            case 'S':
+            case 'Z':
                 keys[1] = true;
                 break;
-            case 'E':
+            case 'I':
                 keys[2] = true;
                 break;
-            case 'D':
+            case 'M':
                 keys[3] = true;
                 break;
         }
